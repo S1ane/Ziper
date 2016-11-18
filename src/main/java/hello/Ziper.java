@@ -37,7 +37,6 @@ public class Ziper {
         if (f.exists()) {
 
             if (f.isDirectory()) {
-
                 if (!folderName.equalsIgnoreCase(baseFolderName)) {
                     String entryName = folderName.substring(baseFolderName.length() + 1, folderName.length()) + File.separatorChar;
                     ZipEntry ze = new ZipEntry(entryName);
@@ -53,6 +52,7 @@ public class Ziper {
                 write(new FileInputStream(folderName), out);
             }
         }
+
         else {
         System.out.println("File or directory not found " + folderName);
         }
